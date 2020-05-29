@@ -1,0 +1,85 @@
+
+{
+  book(id: 3){
+    name
+    genre
+    author {
+      id
+      name
+      age
+    }
+  }
+}
+
+mutation {
+  addAuthor(name: "Margareth Antwood", age: 67) {
+    name
+    id
+  }
+}
+
+mutation {
+  addBook(name: "The whistle blower", genre: "Politics", authorId:"5ecbe0b346d1c364822271db"){
+    name
+    genre
+  }
+}
+
+Lesson 20. 
+
+{
+  books {
+    name
+    genre
+    author {
+      name
+      age
+    }
+  }
+}
+
+{
+	authors{
+    name
+    age
+    books{
+      name
+      genre
+    }
+  }
+}
+
+{
+  book(id: "5ecbece5a60dda1044a9fb29"){
+    name
+    genre
+    author {
+      name
+    }
+  }
+}
+
+{
+  book(id: "5ecbece5a60dda1044a9fb29"){
+    name
+    genre
+    author {
+      name
+      books {
+        name
+      }
+    }
+  }
+}
+
+{
+  author(id: "5ecbedcaa60dda1044a9fb2b"){
+    name
+    age
+    books{
+      name
+    }
+  }
+}
+
+
